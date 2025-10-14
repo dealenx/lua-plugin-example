@@ -1,14 +1,15 @@
 -- plugin.lua
 -- Square area calculation plugin
 
+local math = require("./math")
 local plugin = {}
 
 plugin.name = "Square"
 plugin.description = "Calculates square area"
 
--- Formula: S = a * a, where a is the side length
-function plugin.calculate(side)
-    return side * side
+
+function plugin.calculate(radius)
+    return math.circle_area(radius)
 end
 
 return plugin
